@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <h4>Shift</h4>
+    <div class="row">
+        {% for item in shift %}
+            <div class="card col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.0 }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.1 }}</h6>
+                </div>
+            </div>
+        {% endfor %}  
+    </div>
+</div>
+<div>
+    <h4>Age</h4>
+    <div class="row">
+        {% for item in age %}
+            <div class="card col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.0 }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.1 }}</h6>
+                </div>
+            </div>
+        {% endfor %}  
+    </div>
+</div>
+<div>
+    <h4>Location</h4>
+    <div class="row">
+        {% for item in location %}
+            <div class="card col-md-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {% if item.0 == '' %}
+                            None
+                            {% else %}
+                            {{ item.0 }}
+                        {% endif %} 
+                    </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.1 }}</h6>
+                </div>
+            </div>
+        {% endfor %}  
+    </div>
+</div>
+
+<div>
+    <h4>Running</h4>
+    <div class="row">
+        {% for item in running %}
+            <div class="card col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.0 }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.1 }}</h6>
+                </div>
+            </div>
+        {% endfor %}  
+    </div>
+</div>
+<div>
+    <h4>Chasing</h4>
+    <div class="row">
+        {% for item in chasing %}
+            <div class="card col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.0 }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ item.1 }}</h6>
+                </div>
+            </div>
+        {% endfor %}  
+    </div>
+</div>
+{% endblock %}
