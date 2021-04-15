@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% load bootstrap4 %}
+    <div>
+        <h4 class="text-center">Edit The  Sighting</h4>
+        <form class="form-horizontal" method="post" action="">
+        {% csrf_token %}
+        {% bootstrap_form user_form %}
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
