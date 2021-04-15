@@ -30,3 +30,9 @@ Contributors
 Project Group 12
 
 UNIs: [zh2454, yl4045]
+
+Squirrels
+------------
+<div align="center">
+  <img src="https://images.app.goo.gl/CC37qW37eiNyxsWBA">
+</div>
