@@ -1,0 +1,14 @@
+<ul class="navbar nav justify-content-center navbar-light bg-light">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'map' %}">Map</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'sightings' %}">Sightings</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'add' %}">Add</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'stats' %}">Stats</a>
+    </li>
+  </ul>
