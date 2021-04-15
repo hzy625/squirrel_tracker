@@ -1,6 +1,6 @@
 # Squirrel Data Management System
 
-The project develops a web applications with the Django framework to track the squirrels in Central Park.
+Our project develops a web applications with the Django framework to track the squirrels in Central Park.
 It displays the data from [**2018 Central Park Squirrel Census**][2018 Central Park Squirrel Census] and indicates each location on map by using of [**leaflet library**][leaflet library]. It also allows the user to check, update and add new sightings to the data, and export it as a csv file. 
 
 The styling of the site is using [**bootstrap4**][bootstrap4].
