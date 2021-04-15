@@ -34,5 +34,5 @@ UNIs: [zh2454, yl4045]
 Squirrels
 ------------
 <div align="center">
-  <img src="https://images.app.goo.gl/CC37qW37eiNyxsWBA">
+  <img src="https://www.treehugger.com/thmb/mIxuikwrdLG4BgvzRf4vpfKV1nM=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2014__12__gray-squirrel-uc-berkeley-e95928eec1b84a56b6f32e32840376ae.jpg">
 </div>
