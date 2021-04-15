@@ -39,6 +39,7 @@ def update(request, unique_squirrel_id):
         else:
             return render(request, 'squirrel/edit.html', {'user_form': user_form})   
 
+
 def add(request):
     """
     upload
@@ -54,4 +55,75 @@ def add(request):
             return redirect('sightings') # TODO
         else:
             return render(request, 'squirrel/add.html', {'user_form': user_form})    
+
+def general_stats(request):
+    """
+    统计
+    five of the attributes
+    """
+    
+    with connection.cursor() as cursor:
+        # 1. shift
+        sql = '''
+            select 
+                shift,
+                count(shift)
+            from squirrel_squirrel
+            group by shift
+        '''
+        shift = cursor.execute(sql).fetchall()
+        
+        # 2. age
+        sql = '''
+            select 
+                age,
+                count(age)
+            from squirrel_squirrel
+            group by age
+            having age in ('Adult', 'Juvenile')
+        '''
+        age = cursor.execute(sql).fetchall()
+        # 3. location
+        sql = '''
+            select 
+                location,
+                count(location)
+            from squirrel_squirrel
+            group by location
+        '''
+        location = cursor.execute(sql).fetchall()
+
+        # 4. running
+        sql = '''
+            select 
+                running,
+                count(running)
+            from squirrel_squirrel
+            group by running
+        '''
+        running = cursor.execute(sql).fetchall()
+
+        # 5. chasing
+        sql = '''
+            select 
+                chasing,
+                count(chasing)
+            from squirrel_squirrel
+            group by chasing
+        '''
+        chasing = cursor.execute(sql).fetchall()
+
+    return render(request, 'squirrel/stats.html', {
+        'shift': shift,
+        'age': age,
+        'location': location,
+        'running': running,
+        'chasing': chasing
+    })
+
+
+
+
+
+
 
